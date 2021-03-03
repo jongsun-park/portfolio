@@ -7,11 +7,12 @@ import Layout from "./components/layout";
 import Projects from "./components/projects";
 
 import { Hero, Skills, Contact } from "./components/sections";
+gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
-  gsap.registerPlugin(ScrollTrigger);
   // code fpr scroll trigger
   useEffect(() => {
+    console.clear();
     gsap.defaults({ overwrite: "auto" });
     gsap.set(".left-content > *", { xPercent: -50, yPercent: -50 });
 

@@ -65,6 +65,7 @@ const ContentContainer = () => (
               </ul>
               <p>{p.desctiption}</p>
               <p>{p.desctiption}</p>
+              <p>{p.desctiption}</p>
               <a
                 className="link"
                 href={p.live}
@@ -99,7 +100,7 @@ export default Projects;
 
 const ProjectsContainer = styled.div`
   .contentMarker {
-    min-height: 100vh;
+    min-height: 150vh;
   }
 
   .product-tags {
