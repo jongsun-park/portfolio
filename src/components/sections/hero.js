@@ -8,7 +8,6 @@ export const Hero = () => {
     const marks = document.querySelectorAll("mark");
     marks.forEach((mark, index) => {
       setTimeout(() => {
-        console.log(mark);
         mark.classList.add("mark");
       }, transitionDuration * index);
     });
@@ -17,8 +16,7 @@ export const Hero = () => {
     <Container className="row">
       <div className="col">
         <h2 className="section-title">
-          Hi, I’m Park, <mark>Web Designer</mark>
-          and <mark>Web Developer</mark>
+          Hi, I’m Park, <mark>Web Designer</mark> and <mark>Web Developer</mark>
         </h2>
         <p className="section-description">
           I design and build beautiful websites for businesses around the globe.

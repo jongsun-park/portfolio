@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import "./index.css";
-import { Button } from "../common/button";
 
 const description =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan arcu et lacinia blandit. Curabitur eleifend mauris vel elit elementum varius. Aliquam non rutrum metus. Donec dapibus tristique rutrum. Sed aliquam mauris at diam aliquam placerat. Vestibulum in augue congue nisl imperdiet pellentesque vel eu ante. ";
