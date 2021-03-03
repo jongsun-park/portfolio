@@ -1,0 +1,57 @@
+.content-container {
+  display: flex;
+}
+.content-container > * {
+  flex-basis: 100%;
+  position: relative;
+}
+
+.contentMarker__inner {
+  position: sticky;
+  top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.right-content {
+  padding-right: 15px;
+}
+
+.left-content {
+  height: 100vh;
+  position: relative;
+}
+
+.left-content > * {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+  visibility: hidden;
+  max-width: 90%;
+}
+
+.md-only {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .left-content {
+    display: none;
+  }
+  .right-content {
+    padding-left: 15px;
+  }
+  .md-only {
+    display: block;
+    max-width: clamp(200px, 100%, 500px);
+    margin: 4rem auto 2rem;
+
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s ease;
+  }
+  .md-only.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

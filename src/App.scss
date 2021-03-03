@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?Noto+Sans:wght@700&family=Mulish&display=swap");
+// @import "./styles/media.scss";
+
+:root {
+  --primary-font-family: "Mulish", sans-serif;
+  --seconday-font-family: "Noto Sans", sans-serif;
+  --primary-color: "";
+  --secondary-color: "";
+  --light-gray-color: rgb(183, 180, 185);
+  --light-background-color: rgb(249, 239, 231);
+  --dark-background-color: #faccc3;
+  --highlight-color: rgb(255, 232, 114);
+  --bp-xxl: 1400px;
+  --bp-xl: 1200px;
+  --bp-lg: 992px;
+  --bp-md: 768px;
+  --bp-sm: 576px;
+  --gutter-sm: 0.75rem;
+  --gutter-md: 1rem;
+  --gutter-ls: 1.25rem;
+}
+
+/* boxsizing reset */
+html {
+  box-sizing: border-box;
+}
+*:not(img),
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+// scroll behavior
+html {
+  scroll-behavior: smooth;
+}
+
+/* typography */
+* {
+  font-family: var(--primary-font-family);
+}
+
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+/* section-title */
+.section-title {
+  font-family: var(--seconday-font-family);
+  font-size: 3rem;
+  max-width: 20ch;
+  line-height: 1.1;
+}
+
+// section-description
+.section-description {
+  max-width: 500px;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+// link style reset
+
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+// list style reset
+ul {
+  list-style: none;
+  padding-left: initial;
+  margin: 0;
+}
+
+// row
+.row {
+  display: flex;
+  align-items: flex-start;
+  margin: clamp(1rem, 5vw, 3rem) auto;
+}
+
+.row .col {
+  flex: 1;
+}
+
+/* media query xxl*/
+@media (max-width: 1400px) {
+}
+
+/* media query xl*/
+@media (max-width: 1200px) {
+}
+/* media query lg*/
+@media (max-width: 992px) {
+}
+/* media query md*/
+@media (max-width: 768px) {
+}
+
+/* media query sm*/
+@media (max-width: 576px) {
+  .row {
+    flex-direction: column;
+    .section-title {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+// hightlight & link styles
+mark,
+.mark {
+  background-color: unset;
+}
+
+mark,
+a {
+  position: relative;
+  display: inline-block;
+}
+
+mark::before,
+a::before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 0%;
+  height: 70%;
+  background: var(--highlight-color);
+  z-index: -1;
+  transition: all ease-out 300ms;
+}
+
+mark.mark::before,
+a:hover::before {
+  width: 100%;
+}
+
+// link styles
+.link {
+  border-bottom: 2px solid;
+  padding-bottom: 2px;
+  font-weight: bold;
+}

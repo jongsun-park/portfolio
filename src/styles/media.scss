@@ -1,0 +1,37 @@
+$bp-xxl: 1400px;
+$bp-xl: 1200px;
+$bp-lg: 992px;
+$bp-md: 768px;
+$bp-sm: 576px;
+
+/* media query xxl*/
+@media (max-width: $bp-xxl) {
+  body {
+    background-color: red;
+  }
+}
+
+/* media query xl*/
+@media (max-width: $bp-xl) {
+  body {
+    background-color: orange;
+  }
+}
+/* media query lg*/
+@media (max-width: $bp-lg) {
+  body {
+    background-color: yellow;
+  }
+}
+/* media query md*/
+@media (max-width: $bp-md) {
+  body {
+    background-color: yellowgreen;
+  }
+}
+/* media query sm*/
+@media (max-width: $bp-sm) {
+  body {
+    background-color: green;
+  }
+}
